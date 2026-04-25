@@ -4,11 +4,21 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background:  #ffffff;
+    /*font-family: ;*/
 }
 
-h1 {
-    margin-bottom: 20px;
+ .logo {
+    font-size: 80px;
+    font-weight: bold;
+     letter-spacing: -3px; /* tighter like real Google */
 }
+  
+
+  .blue { color: #4285F4; }
+  .red { color: #EA4335; }
+  .yellow { color: #FBBC05; }
+  .green { color: #34A853; }
 
 input,button {
     border-radius: 25px;
@@ -18,10 +28,20 @@ input,button {
 input{
     width: 500px;
     margin-bottom: 15px;
+       /* FIXED COLOR */
+     border: 1px solid #dfe1e5;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background-color: white;
+    outline: none;
 }
 
 button{
     width: 150px;
+       /* FIXED COLOR */
+    background-color: #f8f9fa;
+    color: #3c4043;
+    border: 1px solid #f8f9fa;
+    cursor: pointer;
 }
 
 .buttons {
