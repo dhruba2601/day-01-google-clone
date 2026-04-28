@@ -1,25 +1,82 @@
 <!DOCTYPE html>
+<!--
+  =============================================
+  PROJECT: Google Homepage Clone
+  AUTHOR: dhruba2601
+  DATE: 2026
+  GITHUB: https://github.com/dhruba2601
+  =============================================
+  WHAT THIS FILE DOES:
+  This is the HTML file. HTML is like the
+  skeleton of a human body. It gives structure
+  to our page — the logo, search bar, and
+  buttons that you SEE on the page.
+
+  This is a clone of Google's homepage
+  built using only HTML and CSS.
+  No JavaScript. No frameworks. Just basics.
+  =============================================
+-->
+
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google.com</title>
+    <meta charset="UTF-8"> <!-- Tells browser to support all standard characters -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes it work on mobile screens -->
+    <title>Google.com</title> <!-- Text shown on the browser tab -->
+
+    <!--
+      Linking our CSS file.
+      CSS controls how everything looks —
+      colors, sizes, spacing, layout.
+    -->
     <link rel="stylesheet" href="google_style.css">
 </head>
+
 <body>
+
+    <!--
+      GOOGLE LOGO
+      The real Google logo has each letter in a different color.
+      We use <span> tags to wrap each letter individually
+      and then color each one separately using CSS classes.
+
+      Color breakdown:
+      G = Blue
+      o = Red
+      o = Yellow
+      g = Blue
+      l = Green
+      e = Red
+    -->
     <div class="logo">
-        <span class="blue">G</span>
-        <span class="red">o</span>
-        <span class="yellow">o</span>
-        <span class="blue">g</span>
-        <span class="green">l</span>
-        <span class="red">e</span>
-   </div>
-    <input type="text">
-    <div class="buttons">
-    <button>Google Search</button>
-    <button>I'm Feeling Lucky</button>
+        <span class="blue">G</span>    <!-- Blue -->
+        <span class="red">o</span>     <!-- Red -->
+        <span class="yellow">o</span>  <!-- Yellow -->
+        <span class="blue">g</span>    <!-- Blue -->
+        <span class="green">l</span>   <!-- Green -->
+        <span class="red">e</span>     <!-- Red -->
     </div>
-    
+
+    <!--
+      SEARCH BAR
+      A simple text input field where users type their search.
+      Styled in CSS to look like Google's rounded search bar.
+      type="text" means it accepts regular text input.
+    -->
+    <input type="text" placeholder="Search Google">
+
+    <!--
+      SEARCH BUTTONS
+      Two buttons just like the real Google homepage:
+      1. "Google Search" — would normally submit search
+      2. "I'm Feeling Lucky" — would normally go to first result
+      These are UI only — no functionality in this clone.
+    -->
+    <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+
 </body>
 </html>
