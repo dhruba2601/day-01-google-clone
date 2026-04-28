@@ -1,50 +1,125 @@
+/*
+  =============================================
+  PROJECT: Google Homepage Clone - Styles
+  AUTHOR: dhruba2601
+  =============================================
+  WHAT THIS FILE DOES:
+  CSS controls how everything looks on the page.
+  Think of it as the clothing and appearance
+  of our HTML skeleton.
+
+  Without CSS: plain black text on white background.
+  With CSS: colored logo, rounded search bar,
+  styled buttons — just like the real Google.
+
+  HOW CSS WORKS:
+  selector { property: value; }
+  .className targets elements with that class.
+  =============================================
+*/
+
+
+/* =============================================
+   BODY — FULL PAGE LAYOUT
+   Centers everything on the page both
+   horizontally and vertically.
+
+   Flexbox is used here:
+   - display: flex → activates flexbox layout
+   - flex-direction: column → stack items top to bottom
+   - align-items: center → center horizontally
+   - justify-content: center → center vertically
+   - height: 100vh → take full screen height
+     (vh = viewport height, 100vh = 100% of screen)
+   ============================================= */
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background:  #ffffff;
-    /*font-family: ;*/
+    display: flex;              /* Activates flexbox */
+    flex-direction: column;     /* Stack logo, input, buttons vertically */
+    align-items: center;        /* Center everything horizontally */
+    justify-content: center;    /* Center everything vertically */
+    height: 100vh;              /* Full screen height */
+    background: #ffffff;        /* Pure white background — same as Google */
 }
 
- .logo {
-    font-size: 80px;
-    font-weight: bold;
-     letter-spacing: -3px; /* tighter like real Google */
-}
-  
 
-  .blue { color: #4285F4; }
-  .red { color: #EA4335; }
-  .yellow { color: #FBBC05; }
-  .green { color: #34A853; }
-
-input,button {
-    border-radius: 25px;
-    padding: 10px 15px;
+/* =============================================
+   GOOGLE LOGO
+   The large colorful "Google" text at the top.
+   Each letter is colored separately using
+   span tags with color classes (.blue, .red etc.)
+   ============================================= */
+.logo {
+    font-size: 80px;        /* Very large text */
+    font-weight: bold;      /* Bold letters */
+    letter-spacing: -3px;   /* Negative spacing pulls letters closer together
+                               This makes it look like the real Google logo
+                               where letters are tightly packed */
 }
 
-input{
-    width: 500px;
-    margin-bottom: 15px;
-       /* FIXED COLOR */
-     border: 1px solid #dfe1e5;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    background-color: white;
-    outline: none;
+
+/* =============================================
+   LOGO LETTER COLORS
+   Each class colors one letter of the logo.
+   These are Google's exact brand colors.
+   ============================================= */
+.blue   { color: #4285F4; }   /* G and g — Google Blue */
+.red    { color: #EA4335; }   /* o and e — Google Red */
+.yellow { color: #FBBC05; }   /* o — Google Yellow */
+.green  { color: #34A853; }   /* l — Google Green */
+
+
+/* =============================================
+   SHARED STYLES: INPUT AND BUTTON
+   These styles apply to BOTH the search bar
+   and the buttons at the same time.
+   Writing shared styles once avoids repetition.
+   ============================================= */
+input, button {
+    border-radius: 25px;    /* Fully rounded pill shape */
+    padding: 10px 15px;     /* Space inside — top/bottom: 10px, left/right: 15px */
 }
 
-button{
-    width: 150px;
-       /* FIXED COLOR */
-    background-color: #f8f9fa;
-    color: #3c4043;
-    border: 1px solid #f8f9fa;
-    cursor: pointer;
+
+/* =============================================
+   SEARCH INPUT BAR
+   The rounded text field where users type.
+   Styled to match Google's clean search bar.
+   ============================================= */
+input {
+    width: 500px;                           /* Fixed width */
+    margin-bottom: 15px;                    /* Space between input and buttons below */
+    border: 1px solid #dfe1e5;             /* Light grey thin border */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow below input
+                                              0 = no horizontal shadow
+                                              2px = 2px vertical shadow
+                                              5px = blur amount
+                                              rgba(0,0,0,0.1) = black at 10% opacity */
+    background-color: white;               /* White background */
+    outline: none;                          /* Removes blue glow when clicked */
 }
 
+
+/* =============================================
+   SEARCH BUTTONS
+   Two buttons: "Google Search" and "I'm Feeling Lucky"
+   Styled with light grey background like real Google.
+   ============================================= */
+button {
+    width: 150px;                   /* Fixed width for both buttons */
+    background-color: #f8f9fa;      /* Very light grey — Google's button color */
+    color: #3c4043;                 /* Dark grey text */
+    border: 1px solid #f8f9fa;      /* Border same color as background (invisible border) */
+    cursor: pointer;                /* Shows hand icon when hovering */
+}
+
+
+/* =============================================
+   BUTTONS CONTAINER
+   Wraps both buttons side by side with a gap.
+   display: flex puts them in a row.
+   gap: 10px adds space between them.
+   ============================================= */
 .buttons {
-    display: flex;
-    gap: 10px;
+    display: flex;  /* Place buttons side by side */
+    gap: 10px;      /* 10px space between the two buttons */
 }
